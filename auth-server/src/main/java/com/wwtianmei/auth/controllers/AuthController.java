@@ -83,8 +83,8 @@ public class AuthController {
                 break;
             case "gitee":
                 authRequest = new AuthGiteeRequest(AuthConfig.builder()
-                        .clientId("02f652aa53caa4eef9d1bae2d07569393292a44f175ba750890d9b473189d17d")
-                        .clientSecret("0df677ee18c6b522b2ad335d6d592b858281d549502721a6a8b3d2555a51c28f")
+                        .clientId("")
+                        .clientSecret("")
                         .redirectUri("http://127.0.0.1:8084/oauth/callback/gitee")
                         .state(AuthState.create(source))
                         .build());
