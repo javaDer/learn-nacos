@@ -21,6 +21,7 @@
     </properties>
     <modules>
         <module>feign-server</module>
+        <module>sso-server</module>
         <module>config-client</module>
         <module>provider</module>
         <module>consumer</module>

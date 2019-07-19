@@ -10,7 +10,5 @@ import java.util.List;
  * @date 2019-07-17 18:53
  */
 public interface SinaNewService {
-
-
     List<News> findAllNews();
 }
