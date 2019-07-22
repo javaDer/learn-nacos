@@ -70,4 +70,32 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.google.cloud.tools</groupId>
+                <artifactId>jib-maven-plugin</artifactId>
+                <version>0.9.9</version>
+                <configuration>
+                    <container>
+                        <jvmFlags>
+                            <jvmFlag>-Xms512m</jvmFlag>
+                        </jvmFlags>
+<!--                        <ports>-->
+<!--                            <port>8080</port>-->
+<!--                        </ports>-->
+                        <useCurrentTimestamp>true</useCurrentTimestamp>
+                    </container>
+                    <from>
+                        <image>java:8u172-jre-alpine</image>
+                    </from>
+                    <to>
+                        <image>jib-demo:${maven.build.timestamp}</image>
+                    </to>
+                    <allowInsecureRegistries>true</allowInsecureRegistries>
+                    <extraDirectory>${project.basedir}/src/main/jib</extraDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
